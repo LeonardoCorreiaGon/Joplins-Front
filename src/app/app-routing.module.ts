@@ -6,6 +6,8 @@ import { OurMaterialComponent } from './our-material/our-material.component';
 import { CoursesComponent } from './courses/courses.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { ContactComponent } from './contact/contact.component';
+import { CreateAccountComponent } from './create-account/create-account.component';
+
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -14,7 +16,9 @@ const routes: Routes = [
   {path: 'cursos', component: CoursesComponent},
   {path: 'contato', component: ContactComponent},
   {path: 'autenticacao', component: AuthenticationComponent},
+  {path: 'registrar', component: CreateAccountComponent},
 ];
+
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
@@ -29,6 +33,7 @@ export const routingComponents = [
                                   OurMaterialComponent, 
                                   CoursesComponent, 
                                   AuthenticationComponent, 
-                                  ContactComponent
+                                  ContactComponent,
+                                  CreateAccountComponent
                                   
                                 ]
