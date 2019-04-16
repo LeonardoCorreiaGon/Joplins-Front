@@ -13,7 +13,7 @@ import { Clients } from '../services/clients';
 
 export class ApiService {
 
-  apiURL = "http://gpa.herokuapp.com/api/";
+  apiURL = "http://localhost:8000";
 
   constructor(private http: HttpClient) { }
 
@@ -23,14 +23,16 @@ export class ApiService {
     })
   } 
 
-  // 
-  getClients(): Observable<Clients> {
-    return this.http.get<Clients>(this.apiURL + '/employees')
-    .pipe(
-      retry(1),
-      catchError(this.handleError)
-    )
+  testeAPI() {
+    return this.http.get(this.apiURL + '/test-joplins/static/');
   }
+  // getClients(): Observable<Clients> {
+  //   return this.http.get<Clients>(this.apiURL + 'test-joplins/static/')
+  //   .pipe(
+  //     retry(1),
+  //     catchError(this.handleError)
+  //   )
+  // }
 
   private handleError(error: any): Promise<any> {
     console.error('error ==> ', error); // for demo purposes only
