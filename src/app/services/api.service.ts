@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Observable, throwError } from 'rxjs';
-import { retry, catchError } from 'rxjs/operators';
 
+// import { Observable, throwError } from 'rxjs';
+// import { retry, catchError } from 'rxjs/operators';
 // -------------------------------------------------------------------------- //
+// import { Clients } from '../services/clients';
 
-import { Clients } from '../services/clients';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,8 @@ import { Clients } from '../services/clients';
 
 export class ApiService {
 
-  apiURL = "http://localhost:8000";
+  apiURL = "http://gpa.herokuapp.com/api";
+  res = {};
 
   constructor(private http: HttpClient) { }
 
@@ -23,20 +24,13 @@ export class ApiService {
     })
   } 
 
-  testeAPI() {
-    return this.http.get(this.apiURL + '/test-joplins/static/');
+  getData(extURL){
+    this.http.get(this.apiURL+extURL).subscribe(data => {
+      this.res = data;
+      console.log(data);
+    });
   }
-  // getClients(): Observable<Clients> {
-  //   return this.http.get<Clients>(this.apiURL + 'test-joplins/static/')
-  //   .pipe(
-  //     retry(1),
-  //     catchError(this.handleError)
-  //   )
-  // }
 
-  private handleError(error: any): Promise<any> {
-    console.error('error ==> ', error); // for demo purposes only
-    return Promise.reject(error.message || error);
- }
+
 
 }
