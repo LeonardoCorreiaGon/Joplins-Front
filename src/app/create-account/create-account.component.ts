@@ -97,7 +97,7 @@ export class CreateAccountComponent implements OnInit {
                          console.log(this.errors)
                     } else {
                          this.__cookieService.put("request_session_auth", "auth_company_true")
-                         // profile
+                         // company profile
                          this.router.navigate(['/'])
                     }  
 
@@ -117,10 +117,10 @@ export class CreateAccountComponent implements OnInit {
                          console.log(this.errors)
                     } else {
                          this.__cookieService.put("request_session_auth", "auth_user_true")
-                         // profile
+                         // user profile
                          this.router.navigate(['/'])
                     }  
-                    
+
                })
 
      }

@@ -18,9 +18,6 @@ export class ApiService {
           })
      }
 
-     // getConfig(u) {
-     //      return this.http.get(u)
-     // }
 
      postCompany (c) {
           return new Promise((resolve, reject) => {
