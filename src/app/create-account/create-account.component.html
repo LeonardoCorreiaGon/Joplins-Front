@@ -1,50 +1,167 @@
-<div class="main-container">
-    <section class="imageblock switchable feature-large height-100">
-        <div class="imageblock__content col-lg-6 col-md-4 pos-right">
-            <div class="background-image-holder" style="background: url(&quot;assets/img/inner-7.jpg&quot;); opacity: 1;">
-                <img alt="image" src="assets/img/inner-7.jpg">
-            </div>
-        </div>
-        <div class="container pos-vertical-center">
-            <div class="row">
-                <div class="col-lg-5 col-md-7">
-                    <h2>Create a Joplins account</h2>
-                    <p class="lead">Get started with a 14 day free trial, No credit card required — cancel at any time.</p>
-                    <a class="btn block btn--icon bg--facebook type--uppercase" href="#">
-                        <span class="btn__text">
-                            <i class="socicon-facebook"></i>
-                            Sign up with Facebook
-                        </span>
-                    </a>
-                    <a class="btn block btn--icon bg--twitter type--uppercase" href="#">
-                        <span class="btn__text">
-                            <i class="socicon-twitter"></i>
-                            Sign up with Twitter
-                        </span>
-                    </a>
-                    <hr data-title="OR">
-                    <form>
-                        <div class="row">
-                            <div class="col-12">
-                                <input type="email" name="Email Address" placeholder="Email Address">
-                            </div>
-                            <div class="col-12">
-                                <input type="password" name="Password" placeholder="Password">
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn--primary type--uppercase">Create Account</button>
-                            </div>
-                            <div class="col-12">
-                                <span class="type--fine-print">By signing up, you agree to the
-                                    <a href="#">Terms of Service</a>
-                                </span>
-                            </div>
-                        </div>
-                        
-                    </form>
-                </div>
-            </div>
-            
-        </div>
-    </section>
-</div>
+<section class="switchable bg--secondary">
+
+     <div class="container">
+
+          <div class="row justify-content-between">
+
+               <div class="col-md-6 col-lg-5">
+
+                    <div class="mt--3">
+
+                         <h1 class="mb--3">Formulário de Cadastro.</h1>
+
+                         <hr>
+
+                         <div *ngIf="errors.error == true">
+                             <p style="color:red;"> {{errors.message}} </p>
+                         </div>
+
+                         <div [ngClass]="[animate_a]">
+
+                              <p class="lead">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo quisquam
+                                   provident?
+                                   Dolorem molestiae consequatur sunt consectetur.
+                              </p>
+
+                              <hr class="short">
+
+                              <a class="btn  btn--primary" (click)="formGo(1)">
+                                   <span class="btn__text">Empresa</span>
+                              </a>
+
+                              <a class="btn" (click)="formGo(2)">
+                                   <span class="btn__text">Candidato</span>
+                              </a>
+
+                         </div>
+
+                         <!-- EMPRESA -->
+                         <div [ngClass]="[animate_b]">
+
+                              <div class="row">
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_company.name"
+                                             placeholder="Nome da Empresa">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="email" [(ngModel)]="form_company.name" placeholder="E-mail">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_company.cnpj_or_mei"
+                                             placeholder="Apelido do Responsável">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="number" [(ngModel)]="form_company.responsible_account"
+                                             placeholder="CPNJ ou MEI">
+                                   </div>
+
+                                   <div class="col-7 p-1">
+                                        <input type="text" [(ngModel)]="form_company.area" placeholder="Área">
+                                   </div>
+
+                                   <div class="col-5 p-1">
+                                        <input type="number" [(ngModel)]="form_company.company_employees"
+                                             placeholder="Qtd funcionários">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_company.description"
+                                             placeholder="Descrição">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_company.company_site"
+                                             placeholder="Website">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_company.address" placeholder="Endereço">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="tel" [(ngModel)]="form_company.tel"
+                                             placeholder="Telefone de contato">
+                                   </div>
+
+                                   <div class="col-12 p-2">
+                                        <a class="btn btn--primary" (click)="registerCompany()">
+                                             <span class="btn__text">Criar Conta</span>
+                                        </a>
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <span class="type--fine-print">Ao se cadastrar, você concorda com os
+                                             <a href="#">Termos e Serviços</a>
+                                        </span>
+                                   </div>
+
+                                   <a class="btn btn--sm mt--1" (click)="formGo(3)">
+                                        <span class="btn__text">Voltar</span>
+                                   </a>
+
+                              </div>
+
+                         </div>
+
+                         <!-- CANDIDATO -->
+                         <div [ngClass]="[animate_c]">
+
+                              <div class="row">
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_user.name" placeholder="Primeiro nome">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="text" [(ngModel)]="form_user.last_name" placeholder="Sobrenome">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="email" [(ngModel)]="form_user.email" placeholder="E-mail">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="password" [(ngModel)]="form_user.password" placeholder="Senha">
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <input type="date" [(ngModel)]="form_user.birth_date"
+                                             placeholder="Data de nascimento">
+                                   </div>
+
+                                   <div class="col-12 p-2">
+                                        <a class="btn btn--primary" (click)="registerUser()">
+                                             <span class="btn__text">Criar Conta</span>
+                                        </a>
+                                   </div>
+
+                                   <div class="col-12 p-1">
+                                        <span class="type--fine-print">Ao se cadastrar, você concorda com os
+                                             <a href="#">Termos e Serviços</a>
+                                        </span>
+                                   </div>
+
+                                   <a class="btn  btn--sm" (click)="formGo(3)">
+                                        <span class="btn__text">Voltar</span>
+                                   </a>
+
+                              </div>
+
+                         </div>
+                    </div>
+               </div>
+
+               <div class="col-md-6 col-lg-5">
+                    <img alt="Image" class="border--round box-shadow-wide" src="assets/img/photography-9.jpg">
+               </div>
+
+          </div>
+
+     </div>
+
+</section>

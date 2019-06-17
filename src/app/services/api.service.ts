@@ -1,8 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Company } from './company';
 import { Observable } from 'rxjs';
-
 
 @Injectable({
      providedIn: 'root'
@@ -20,19 +18,29 @@ export class ApiService {
           })
      }
 
-     // getCompany (): Observable<Company[]> {
-     //      return this.http.get(this.api + 'company?limit=10', {}, {})
-     //           .then(r => {
-     //                console.log(r)
-     //           })
+     // getConfig(u) {
+     //      return this.http.get(u)
      // }
 
-     // postCompany (c) {
-     //      return this.http.post<Company>(this.api + 'company/register/', c, {})
-     //           .subscribe(r => {
-     //                console.log(r)
-     //           })
-     // } 
+     postCompany (c) {
+          return new Promise((resolve, reject) => {
+               this.http.post(this.api + 'company/register/', c, {})
+                    .subscribe(res => {
+                         console.log(res)
+                         resolve(res)
+                    })
+               })
+     } 
+
+     postUser (c) {
+          return new Promise((resolve, reject) => {
+               this.http.post(this.api + 'users/register/pre-register', c, {})
+                    .subscribe(res => {
+                         console.log(res)
+                         resolve(res)
+                    })
+               })
+     } 
 
      // deleteCompany (i) {
      //      return this.http.delete(this.api + 'company/' + i)
