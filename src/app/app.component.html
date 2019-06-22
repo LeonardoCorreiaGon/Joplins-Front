@@ -1,39 +1,11 @@
-<section class="bar bar-3 bar--sm bg--secondary">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6">
-                <div class="bar__module">
-                    <span class="type--fade">Joplins | Welcome to inovation platform</span>
-                </div>
-            </div>
-            <div class="col-lg-6 text-right text-left-xs text-left-sm">
-                <div class="bar__module">
-                    <ul class="menu-horizontal">
-                        <li>
-                            <div class="modal-instance">
-                                <a href="/autenticacao" class="modal-trigger" data-modal-index="0">Login</a>
-                            </div>
-                        </li>
-                        <li>
-                            <a href="#" data-notification-link="search-box">
-                                <i class="stack-search"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <!--end of row-->
-    </div>
-    <!--end of container-->
-</section>
-<div class="nav-container ">
+<div class="nav-container bg--dark" style="padding: 14px;">
         <div class="bar bar--sm visible-xs">
             <div class="container">
                 <div class="row">
                     <div class="col-3 col-md-2">
                         <a href="/">
-                            <img class=" logo-dark" alt="logo" src="assets/img/logo-dark.jpg">
+                            <span class="logo-dark" style="font-size: 25px">Joplins</span>
+                            <!-- <img class=" logo-dark" alt="logo" src="assets/img/logo-dark.jpg"> -->
                             <!-- <img class="logo logo-light" alt="logo" src="assets/img/logo-light.png"> -->
                         </a>
                     </div>
@@ -51,7 +23,8 @@
                     <div class="col-lg-1 col-md-2 hidden-xs">
                         <div class="bar__module">
                             <a href="/">
-                                <img class=" logo-dark" alt="logo" src="assets/img/logo-dark.jpg">
+                                <span class="logo-dark" style="font-size: 25px">Joplins</span>
+                                <!-- <img class=" logo-dark" alt="logo" src="assets/img/logo-dark.jpg"> -->
                                 <!-- <img class="logo logo-light" alt="logo" src="assets/img/logo-light.png"> -->
                             </a>
                         </div>                        
@@ -69,11 +42,11 @@
                                         <span>Sobre Nós</span>
                                     </a>
                                 </li>
-                                <li class="dropdown">
+                                <!-- <li class="dropdown">
                                     <a href="/nosso-material">
                                         <span>Portifólio</span>
                                     </a>
-                                </li>
+                                </li> -->
                                 <li class="dropdown">
                                     <a href="/contato">
                                         <span>Contato</span>
@@ -84,9 +57,19 @@
                                         <span>Cursos</span>
                                     </a>
                                 </li>
+                                <li class="dropdown">
+                                    <a href="/registrar">
+                                        <span>Cadastrar</span>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="/autenticacao">
+                                        <span>Minha Conta</span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>                        
-                        <div class="bar__module">
+                        <!-- <div class="bar__module">
                             <a class="btn btn--sm type--uppercase" href="/autenticacao">
                                 <span class="btn__text">
                                     Acessar
@@ -97,7 +80,7 @@
                                     Registrar
                                 </span>
                             </a>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -110,11 +93,12 @@
     <!-- Paginas -->
 </router-outlet>
 <!-- ENDROUTER-OUTLET -->
-<footer class="footer-3 text-center-xs space--xs ">
+<footer class="footer-3 text-center-xs space--xs bg--dark">
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img alt="Image" class="logo" src="assets/img/logo-dark.png">
+                <span class="logo-dark" style="font-size: 25px">Joplins</span>
+                <!-- <img alt="Image" class="logo" src="assets/img/logo-dark.png"> -->
                 <ul class="list-inline list--hover">
                     <li class="list-inline-item">
                         <a href="#">
@@ -123,7 +107,7 @@
                     </li>
                     <li class="list-inline-item">
                         <a href="#">
-                            <span class="type--fine-print">help@stack.io</span>
+                            <span class="type--fine-print">help@joplins.com.br</span>
                         </a>
                     </li>
                 </ul>

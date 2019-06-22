@@ -7,6 +7,8 @@ import { CoursesComponent } from './courses/courses.component';
 import { AuthenticationComponent } from './authentication/authentication.component';
 import { ContactComponent } from './contact/contact.component';
 import { CreateAccountComponent } from './create-account/create-account.component';
+import { ProfileUserComponent } from './profile-user/profile-user.component';
+import { ProfileCompanyComponent } from './profile-company/profile-company.component';
 
 
 const routes: Routes = [
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'contato', component: ContactComponent},
   {path: 'autenticacao', component: AuthenticationComponent},
   {path: 'registrar', component: CreateAccountComponent},
+  {path: 'perfil-usuario', component: ProfileUserComponent},
+  {path: 'perfil-empresa', component: ProfileCompanyComponent},
 ];
 
 

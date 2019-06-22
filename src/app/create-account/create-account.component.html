@@ -6,40 +6,47 @@
 
                <div class="col-md-6 col-lg-5">
 
-                    <div class="mt--3">
-
-                         <h1 class="mb--3">Formulário de Cadastro.</h1>
-
-                         <hr>
-
-                         <div *ngIf="errors.error == true">
-                             <p style="color:red;"> {{errors.message}} </p>
-                         </div>
+                    <div class="mt--0">
 
                          <div [ngClass]="[animate_a]">
 
-                              <p class="lead">
-                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo quisquam
-                                   provident?
-                                   Dolorem molestiae consequatur sunt consectetur.
-                              </p>
 
-                              <hr class="short">
+                              <h2 class="mb--0">Formulário de Cadastro.</h2>
 
-                              <a class="btn  btn--primary" (click)="formGo(1)">
-                                   <span class="btn__text">Empresa</span>
-                              </a>
+                              <hr>
 
-                              <a class="btn" (click)="formGo(2)">
-                                   <span class="btn__text">Candidato</span>
-                              </a>
+                              <div *ngIf="errors.error == true">
+                              <p style="color:red;"> {{errors.message}} </p>
+                              </div>
 
-                         </div>
+                              <div>
+
+                                   <p class="lead">
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo quisquam
+                                        provident?
+                                        Dolorem molestiae consequatur sunt consectetur.
+                                   </p>
+
+                                   <hr class="short">
+
+                                   <a class="btn  btn--primary" (click)="formGo(1)">
+                                        <span class="btn__text">Empresa</span>
+                                   </a>
+
+                                   <a class="btn" (click)="formGo(2)">
+                                        <span class="btn__text">Candidato</span>
+                                   </a>
+
+                              </div>
+
+                         </div>    
 
                          <!-- EMPRESA -->
                          <div [ngClass]="[animate_b]">
 
                               <div class="row">
+
+                                   <h3 class="mb--0">Formulário de Empresa.</h3>
 
                                    <div class="col-12 p-1">
                                         <input type="text" [(ngModel)]="form_company.name"
@@ -47,7 +54,7 @@
                                    </div>
 
                                    <div class="col-12 p-1">
-                                        <input type="email" [(ngModel)]="form_company.name" placeholder="E-mail">
+                                        <input type="email" [(ngModel)]="form_company.email" placeholder="E-mail">
                                    </div>
 
                                    <div class="col-12 p-1">
@@ -113,6 +120,8 @@
 
                               <div class="row">
 
+                                   <h3 class="mb--0">Formulário de Candidato.</h3>
+
                                    <div class="col-12 p-1">
                                         <input type="text" [(ngModel)]="form_user.name" placeholder="Primeiro nome">
                                    </div>
@@ -153,6 +162,7 @@
                               </div>
 
                          </div>
+
                     </div>
                </div>
 

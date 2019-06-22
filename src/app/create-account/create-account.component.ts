@@ -88,7 +88,7 @@ export class CreateAccountComponent implements OnInit {
 
      registerCompany() {
 
-          this.api.postUser(this.form_company)
+          this.api.postCompany(this.form_company)
 
                .then(res => {
 
@@ -96,13 +96,13 @@ export class CreateAccountComponent implements OnInit {
                          this.errors = res
                          console.log(this.errors)
                     } else {
+                         console.log("company => ", res)
                          this.__cookieService.put("request_session_auth", "auth_company_true")
                          // company profile
-                         this.router.navigate(['/'])
+                         this.router.navigate(['/perfil-empresa'])
                     }  
 
                })
-
 
      }
 
@@ -116,9 +116,10 @@ export class CreateAccountComponent implements OnInit {
                          this.errors = res
                          console.log(this.errors)
                     } else {
+                         console.log("user => ", res)
                          this.__cookieService.put("request_session_auth", "auth_user_true")
                          // user profile
-                         this.router.navigate(['/'])
+                         this.router.navigate(['/perfil-usuario'])
                     }  
 
                })
