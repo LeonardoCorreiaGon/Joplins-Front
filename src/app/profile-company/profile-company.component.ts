@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
 })
 export class ProfileCompanyComponent implements OnInit {
 
+    data_company = {}
+
     constructor(
         private __cookieService: CookieService,
         public router: Router
@@ -18,6 +20,8 @@ export class ProfileCompanyComponent implements OnInit {
         let key = this.__cookieService.get("request_session_auth")
         if (key === undefined || key === null) {
             this.router.navigate(['/autenticacao'])
+        } else {
+            this.data_company = key
         }
     }
 
