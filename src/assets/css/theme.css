@@ -2999,28 +2999,28 @@ a {
   }
 }
 /**! 28. MailChimp & Campaign Monitor **/
-form[action*='createsend.com'] * {
+.form[action*='createsend.com'] * {
   transition: 0.3s linear;
   -webkit-transition: 0.3s linear;
   -moz-transition: 0.3s linear;
   opacity: 0;
 }
-form[action*='createsend.com'].form--active * {
+.form[action*='createsend.com'].form--active * {
   opacity: 1;
 }
-form[action*='createsend.com'] .input-checkbox + br {
+.form[action*='createsend.com'] .input-checkbox + br {
   display: none;
 }
-form[action*='createsend.com'].no-labels label {
+.form[action*='createsend.com'].no-labels label {
   display: none;
 }
-form[action*='createsend.com'] br {
+.form[action*='createsend.com'] br {
   display: none;
 }
-form[action*='createsend.com'] p > label:first-child {
+.form[action*='createsend.com'] p > label:first-child {
   margin-bottom: 0.92857143em;
 }
-form[action*='list-manage.com'] h2 {
+.form[action*='list-manage.com'] h2 {
   font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
   color: #252525;
   font-weight: 300;
@@ -3032,28 +3032,28 @@ form[action*='list-manage.com'] h2 {
   margin-bottom: 1.36842105263158em;
   font-weight: 400;
 }
-form[action*='list-manage.com'] h2.inline-block + .h4.inline-block:not(.typed-text) {
+.form[action*='list-manage.com'] h2.inline-block + .h4.inline-block:not(.typed-text) {
   margin-left: 0.68421052631579em;
 }
-form[action*='list-manage.com'] .input-group ul {
+.form[action*='list-manage.com'] .input-group ul {
   overflow: hidden;
 }
-form[action*='list-manage.com'] .input-group ul li {
+.form[action*='list-manage.com'] .input-group ul li {
   float: left;
 }
-form[action*='list-manage.com'] * {
+.form[action*='list-manage.com'] * {
   transition: 0.3s linear;
   -webkit-transition: 0.3s linear;
   -moz-transition: 0.3s linear;
   opacity: 0;
 }
-form[action*='list-manage.com'].form--active * {
+.form[action*='list-manage.com'].form--active * {
   opacity: 1;
 }
-form[action*='list-manage.com'].no-labels label {
+.form[action*='list-manage.com'].no-labels label {
   display: none;
 }
-form[action*='list-manage.com'] .small-meta {
+.form[action*='list-manage.com'] .small-meta {
   font-size: 0.5em;
 }
 /**! 29. Twitter **/
@@ -7334,8 +7334,8 @@ span + .typed-text.h1 {
     font-size: 16px;
   }
 }
-form:before,
-form:after {
+.form:before,
+.form:after {
   content: '';
 }
 .bg--dark input,
@@ -7356,49 +7356,49 @@ form:after {
   background: #D84D4D;
   color: #fff;
 }
-form {
+.form {
   position: relative;
 }
-form > div[class*='col-']:not(:last-child),
-form > .row > div[class*='col-']:not(:last-child) {
+.form > div[class*='col-']:not(:last-child),
+.form > .row > div[class*='col-']:not(:last-child) {
   margin-bottom: 0.92857143em;
 }
-form .boxed:last-child {
+.form .boxed:last-child {
   margin: 0;
 }
-form.form--clearfix {
+.form.form--clearfix {
   margin-left: -15px;
 }
 @media all and (min-width: 768px) {
-  div[class*='col-'] > form div[class*='col-']:last-child:nth-child(2) {
+  div[class*='col-'] > .form div[class*='col-']:last-child:nth-child(2) {
     padding-right: 0;
   }
-  div[class*='col-'] > form div[class*='col-']:first-child:nth-last-child(2) {
+  div[class*='col-'] > .form div[class*='col-']:first-child:nth-last-child(2) {
     padding-left: 0;
   }
-  form.form--horizontal > div[class*='col-'] {
+  .form.form--horizontal > div[class*='col-'] {
     margin: 0;
   }
 }
 @media all and (max-width: 767px) {
-  .row form > .row {
+  .row .form > .row {
     margin-left: 0;
     margin-right: 0;
   }
 }
-h2 + form,
-.h2 + form {
+h2 + .form,
+.h2 + .form {
   margin-top: 2.78571429em;
 }
-h3 + form,
-.h3 + form,
-.lead + form {
+h3 + .form,
+.h3 + .form,
+.lead + .form {
   margin-top: 2.78571429em;
 }
-.cover .lead + form {
+.cover .lead + .form {
   margin-top: 3.71428571em;
 }
-form + span.type--fine-print {
+.form + span.type--fine-print {
   margin-top: 1.08333333333334em;
   display: inline-block;
 }
@@ -7835,7 +7835,7 @@ input[type="image"] {
 .subscribe-form-1 h3 {
   margin-bottom: 0.52em;
 }
-.subscribe-form-1.boxed form {
+.subscribe-form-1.boxed .form {
   margin: 1.85714286em;
 }
 @media all and (min-width: 991px) {
@@ -7846,7 +7846,7 @@ input[type="image"] {
   .subscribe-form-2 input {
     margin: 0;
   }
-  .subscribe-form-2 form [class*='col-'] {
+  .subscribe-form-2 .form [class*='col-'] {
     margin: 0 !important;
   }
 }
@@ -7854,7 +7854,7 @@ input[type="image"] {
   .subscribe-form-2 {
     text-align: center;
   }
-  .subscribe-form-2 form {
+  .subscribe-form-2 .form {
     margin-top: 1.85714286em;
   }
 }
@@ -7864,13 +7864,13 @@ input[type="image"] {
     padding-left: 15px;
     padding-right: 15px;
   }
-  .elaborate-form-1 form .col-xs-6:nth-child(even) {
+  .elaborate-form-1 .form .col-xs-6:nth-child(even) {
     padding-left: 15px;
   }
-  .elaborate-form-1 form .col-xs-6:nth-child(odd) {
+  .elaborate-form-1 .form .col-xs-6:nth-child(odd) {
     padding-right: 15px;
   }
-  .elaborate-form-1 .row form > .row {
+  .elaborate-form-1 .row .form > .row {
     margin-left: -15px;
     margin-right: -15px;
   }
@@ -9320,7 +9320,7 @@ footer.footer-7 {
   footer.footer-4 .logo + span {
     position: relative;
   }
-  footer.footer-4 form {
+  footer.footer-4 .form {
     position: relative;
     bottom: 4px;
   }
@@ -9341,7 +9341,7 @@ footer.footer-7 {
   footer .social-list {
     margin: 1.85714286em 0;
   }
-  .footer-4 form {
+  .footer-4 .form {
     margin: 1.85714286em 0;
   }
   .footer-4 .logo {

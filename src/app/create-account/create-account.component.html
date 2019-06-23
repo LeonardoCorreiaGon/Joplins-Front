@@ -2,9 +2,9 @@
 
      <div class="container">
 
-          <div class="row justify-content-between">
+          <div class="row">
 
-               <div class="col-md-6 col-lg-5">
+               <div class="col-md-6 col-lg-7">
 
                     <div class="mt--0">
 
@@ -16,98 +16,82 @@
                               <hr>
 
                               <div *ngIf="errors.error == true">
-                              <p style="color:red;"> {{errors.message}} </p>
+                                   <p style="color:red;"> {{errors.message}} </p>
                               </div>
 
-                              <div>
 
-                                   <p class="lead">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo quisquam
-                                        provident?
-                                        Dolorem molestiae consequatur sunt consectetur.
-                                   </p>
+                              <p class="lead">
+                                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis illo quisquam
+                                   provident?
+                                   Dolorem molestiae consequatur sunt consectetur.
+                              </p>
 
-                                   <hr class="short">
+                              <hr class="short">
 
-                                   <a class="btn  btn--primary" (click)="formGo(1)">
-                                        <span class="btn__text">Empresa</span>
-                                   </a>
+                              <!-- <div class="type--center"> -->
 
-                                   <a class="btn" (click)="formGo(2)">
-                                        <span class="btn__text">Candidato</span>
-                                   </a>
+                              <a class="btn" (click)="formGo(1)">
+                                   <span class="btn__text">Empresa</span>
+                              </a>
 
-                              </div>
+                              <!-- <br> -->
 
-                         </div>    
+
+                              <a class="btn btn--primary-2" (click)="formGo(2)"
+                                   style="margin-left: 2%">
+                                   <span class="btn__text">Candidato</span>
+                              </a>
+
+                              <!-- </div> -->
+
+                         </div>
 
                          <!-- EMPRESA -->
                          <div [ngClass]="[animate_b]">
 
-                              <div class="row">
+                              <div class="form">
 
                                    <h3 class="mb--0">Formulário de Empresa.</h3>
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_company.name"
-                                             placeholder="Nome da Empresa">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.name" placeholder="Nome da Empresa">
 
-                                   <div class="col-12 p-1">
-                                        <input type="email" [(ngModel)]="form_company.email" placeholder="E-mail">
-                                   </div>
+                                   <input type="email" 
+                                             [(ngModel)]="form_company.email" placeholder="E-mail">
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_company.cnpj_or_mei"
-                                             placeholder="Apelido do Responsável">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.cnpj_or_mei" placeholder="Apelido do Responsável">
 
-                                   <div class="col-12 p-1">
-                                        <input type="number" [(ngModel)]="form_company.responsible_account"
-                                             placeholder="CPNJ ou MEI">
-                                   </div>
+                                   <input type="number" 
+                                             [(ngModel)]="form_company.responsible_account" placeholder="CPNJ ou MEI">
 
-                                   <div class="col-7 p-1">
-                                        <input type="text" [(ngModel)]="form_company.area" placeholder="Área">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.area" placeholder="Área">
 
-                                   <div class="col-5 p-1">
-                                        <input type="number" [(ngModel)]="form_company.company_employees"
-                                             placeholder="Qtd funcionários">
-                                   </div>
+                                   <input type="number" 
+                                             [(ngModel)]="form_company.company_employees" placeholder="Qtd funcionários">
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_company.description"
-                                             placeholder="Descrição">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.description" placeholder="Descrição">
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_company.company_site"
-                                             placeholder="Website">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.company_site" placeholder="Website">
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_company.address" placeholder="Endereço">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_company.address" placeholder="Endereço">
 
-                                   <div class="col-12 p-1">
-                                        <input type="tel" [(ngModel)]="form_company.tel"
-                                             placeholder="Telefone de contato">
-                                   </div>
+                                   <input type="tel" 
+                                             [(ngModel)]="form_company.tel" placeholder="Telefone de contato">
 
-                                   <div class="col-12 p-2">
-                                        <a class="btn btn--primary" (click)="registerCompany()">
-                                             <span class="btn__text">Criar Conta</span>
-                                        </a>
-                                   </div>
+                                   <a class="btn btn--primary-2 mt-3" (click)="registerCompany()" style="width: 100%">
+                                        <span class="btn__text">Criar Conta</span>
+                                   </a>
 
-                                   <div class="col-12 p-1">
-                                        <span class="type--fine-print">Ao se cadastrar, você concorda com os
-                                             <a href="#">Termos e Serviços</a>
-                                        </span>
-                                   </div>
+                                   <span class="type--fine-print p-1" style="width: 100%">Ao se cadastrar, você concorda com os
+                                        <a href="#">Termos e Serviços</a>
+                                   </span>
 
-                                   <a class="btn btn--sm mt--1" (click)="formGo(3)">
+                                   <a class="btn btn--sm mt-1" (click)="formGo(3)" style="width: 100%">
                                         <span class="btn__text">Voltar</span>
                                    </a>
 
@@ -118,46 +102,36 @@
                          <!-- CANDIDATO -->
                          <div [ngClass]="[animate_c]">
 
-                              <div class="row">
+                              <div class="form">
 
                                    <h3 class="mb--0">Formulário de Candidato.</h3>
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_user.name" placeholder="Primeiro nome">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_user.name" placeholder="Primeiro nome">
 
-                                   <div class="col-12 p-1">
-                                        <input type="text" [(ngModel)]="form_user.last_name" placeholder="Sobrenome">
-                                   </div>
+                                   <input type="text" 
+                                             [(ngModel)]="form_user.last_name" placeholder="Sobrenome">
 
-                                   <div class="col-12 p-1">
-                                        <input type="email" [(ngModel)]="form_user.email" placeholder="E-mail">
-                                   </div>
+                                   <input type="email" 
+                                             [(ngModel)]="form_user.email" placeholder="E-mail">
 
-                                   <div class="col-12 p-1">
-                                        <input type="password" [(ngModel)]="form_user.password" placeholder="Senha">
-                                   </div>
+                                   <input type="password" 
+                                             [(ngModel)]="form_user.password" placeholder="Senha">
 
-                                   <div class="col-12 p-1">
-                                        <input type="date" [(ngModel)]="form_user.birth_date"
-                                             placeholder="Data de nascimento">
-                                   </div>
+                                   <input type="date" 
+                                             [(ngModel)]="form_user.birth_date" placeholder="Data de nascimento">
 
-                                   <div class="col-12 p-2">
-                                        <a class="btn btn--primary" (click)="registerUser()">
-                                             <span class="btn__text">Criar Conta</span>
-                                        </a>
-                                   </div>
-
-                                   <div class="col-12 p-1">
-                                        <span class="type--fine-print">Ao se cadastrar, você concorda com os
-                                             <a href="#">Termos e Serviços</a>
-                                        </span>
-                                   </div>
-
-                                   <a class="btn  btn--sm" (click)="formGo(3)">
-                                        <span class="btn__text">Voltar</span>
+                                   <a class="btn btn--primary-2 mt-3" (click)="registerUser()" style="width: 100%">
+                                        <span class="btn__text">Criar Conta</span>
                                    </a>
+
+                                   <span class="type--fine-print p-1" style="width: 100%">Ao se cadastrar, você concorda com os
+                                        <a href="#">Termos e Serviços</a>
+                                   </span>
+
+                                   <a class="btn  btn--sm mt-2" (click)="formGo(3)" style="width: 100%">
+                                        <span class="btn__text">Voltar</span>
+                                   </a>     
 
                               </div>
 
