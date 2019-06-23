@@ -8,11 +8,13 @@ import { Router } from '@angular/router';
     styleUrls: ['./authentication.component.scss']
 })
 export class AuthenticationComponent implements OnInit {
+    
 
     login = {
         email: "",
         password: ""
     }
+
 
     constructor(
         private __cookieService: CookieService,
