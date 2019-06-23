@@ -8,9 +8,9 @@ import { Router } from '@angular/router';
     styleUrls: ['./authentication.component.scss']
 })
 export class AuthenticationComponent implements OnInit {
-    
 
-    login = {
+
+    login: any = {
         email: "",
         password: ""
     }

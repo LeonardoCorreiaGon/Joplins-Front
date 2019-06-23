@@ -10,13 +10,13 @@ import { CookieService } from 'angular2-cookie/core';
 })
 export class CreateAccountComponent implements OnInit {
 
-     errors = {};
+     errors: any = {};
 
      animate_a = 'animated bounceInRight'
      animate_b = 'hide'
      animate_c = 'hide'
 
-     form_user = {
+     form_user: any = {
           name: "",
           last_name: "",
           email: "",
@@ -24,7 +24,7 @@ export class CreateAccountComponent implements OnInit {
           birth_date: ""
      }
 
-     form_company = {
+     form_company: any = {
           name: "",
           responsible_account: "",
           cnpj_or_mei: "",
