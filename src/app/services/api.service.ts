@@ -33,7 +33,7 @@ export class ApiService {
           return new Promise((resolve, reject) => {
                this.http.post(this.api + 'company/register/', c, {})
                     .subscribe(res => {
-                         console.log(res)
+                         console.log('resolve: ', res)
                          resolve(res)
                     })
                })
@@ -43,7 +43,7 @@ export class ApiService {
           return new Promise((resolve, reject) => {
                this.http.post(this.api + 'users/register/pre-register', c, {})
                     .subscribe(res => {
-                         console.log(res)
+                         console.log('resolve: ', res)
                          resolve(res)
                     })
                })
