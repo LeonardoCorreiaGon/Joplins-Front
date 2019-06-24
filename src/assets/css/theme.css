@@ -9364,3 +9364,28 @@ footer.footer-7 {
     margin-right: auto;
   }
 }
+
+.curso{
+  height: 235px;
+  width: 350px;
+}
+
+#cursohead {
+  top: -19em;
+  height: 46em;
+  width: 80em;
+  opacity: 0.8 !important;
+}
+
+.head{
+  opacity: 0.8 !important;
+}
+
+#msg{
+  height: 200px; 
+  width: 445px !important; 
+}
+
+#formulario > input{
+  width: 1px !important;
+}

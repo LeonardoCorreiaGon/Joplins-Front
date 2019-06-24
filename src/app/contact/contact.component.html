@@ -3,10 +3,9 @@
         <div class="container pos-vertical-center">
             <div class="row">
                 <div class="col-md-8 col-lg-6">
-                    <h1>Let's talk about your project</h1>
+                    <h1>Vamos conversar?</h1>
                     <p class="lead">
-                        Visit us in Melbourne or make contact via the form below to talk more about your project or
-                        idea.
+                        Queremos te ouvir! Tem dúvidas, sugestões ou elogios? Mande uma mensagem para nós!
                     </p>
                 </div>
             </div>
@@ -15,53 +14,40 @@
         <!--end of container-->
     </section>
     <section class="text-center imagebg" data-gradient-bg="#4876BD,#5448BD,#8F48BD,#BD48B1">
-        <canvas id="granim-0"
-            width="1440" height="600"></canvas>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-9 col-lg-8">
-                    <form class="form--inline form-email"
-                        data-success="Thanks for your enquiry, we'll be in touch shortly."
-                        data-error="Please fill in all fields correctly." novalidate="true">
-                        <span class="h4 inline-block">Hi, I'm</span>
-                        <input type="text" name="name" placeholder="Full Name" class="validate-required">
-                        <span class="h4 inline-block">and I represent</span>
-                        <input type="text" name="Company" placeholder="Company Name" class="validate-required">
-                        <span class="h4 inline-block">I'm looking for someone to work with us on</span>
-                        <div class="input-select">
-                            <select class="validate-required">
-                                <option selected="" value="">Select</option>
-                                <option value="Design">Web Design</option>
-                                <option value="Development">Web Development</option>
-                                <option value="Branding">Branding</option>
-                            </select>
-                        </div>
-                        <span class="h4 inline-block">Budget-wise, I am looking to keep around the</span>
-                        <div class="input-select">
-                            <select class="validate-required">
-                                <option selected="" value="">Select</option>
-                                <option value="0-5k">&lt; 5,000</option>
-                                <option value="5k-10k">5,000 - 10,000</option>
-                                <option value="10k-20k">10,0000 +</option>
-                            </select>
-                        </div>
-                        <span class="h4 inline-block">mark,</span>
-                        <span class="h4 inline-block">and I'm hoping to have the project complete around</span>
-                        <input type="text" name="Date" placeholder="Date / Timeframe" class="validate-required">
-                        <span class="h4 inline-block">Contact me via</span>
-                        <input type="email" name="email" placeholder="Email Address"
-                            class="validate-required validate-email">
-                        <span class="h4 inline-block">or</span>
-                        <input type="tel" name="Phone" placeholder="Phone Number" class="validate-required">
-                        <span class="h4 inline-block">and we can discuss the project in more detail.</span>
-                        <div>
-                            <button type="submit" class="btn btn--primary type--uppercase">Send Enquiry</button>
-                        </div>
-                    </form>
+            <canvas id="granim-0"
+                width="1440" height="600"></canvas>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-lg-5">
+                        <form class="form-email"
+                            data-success="Obrigado! Entraremos em contato."
+                            data-error="Por favor, preencha corretamente os campos" novalidate="true">
+                            <span class="h4 inline-block texto">Nome Completo</span>
+                            <input type="text" name="name" class="validate-required"><br/> <br/>
+                            <span class="h4 inline-block">E-mail</span>
+                            <input type="email" name="email"
+                                class="validate-required validate-email"><br/><br/>
+                            <span class="h4 inline-block">Telefone</span>
+                            <input type="tel" name="Phone" class="validate-required"><br/><br/>
+                            <span class="h4 inline-block">Assunto</span>
+                            <div class="input-select">
+                                <select class="validate-required">
+                                    <option selected="" value="">Selecione</option>
+                                    <option value="Sugestao">Sugestão</option>
+                                    <option value="Duvida">Dúvida</option>
+                                    <option value="Reclamacao">Elogio / Reclamação</option>
+                                </select>
+                            </div><br/><br/>
+                            <span class="h4 inline-block">Mensagem</span><br/>  
+                            <input type="text" name="Date" class="validate-required" id="msg"> <br/><br/>
+                            <div>
+                                <button type="submit" id="btnenviar" class="btn btn--primary type--uppercase">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
+                <!--end of row-->
             </div>
-            <!--end of row-->
-        </div>
-        <!--end of container-->
-    </section>
-</div>
+            <!--end of container-->
+        </section>
+    </div>
